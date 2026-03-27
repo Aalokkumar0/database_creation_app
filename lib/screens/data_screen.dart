@@ -15,7 +15,11 @@ class _DataScreenState extends State<DataScreen> {
       backgroundColor: Colors.black,
       appBar: AppBar(
         backgroundColor: Colors.blueGrey,
-        title: Text("datebase creation"),
+        title: Text("Datebase Quotes",style: TextStyle(
+      fontSize: 27,
+      fontWeight: FontWeight.bold,
+      letterSpacing: 1,
+    ),),
       ),
       body: ListView.builder(
         itemCount: quote.length,
@@ -24,8 +28,14 @@ class _DataScreenState extends State<DataScreen> {
           return Card(
               margin: EdgeInsets.all(10),
               child: ListTile(
-                title: Text(quote[index]["quote"]!),
-                subtitle:Text(quote[index]["Auth"]!),
+                title: Text(quote[index]["Quotes"]!,style: TextStyle(
+                  fontSize: 18,color: const Color.fromARGB(255, 0, 0, 0),
+                  fontWeight: FontWeight.w700
+                ),),
+                subtitle:Text(quote[index]["Auth"]!,style: TextStyle(
+                  fontSize: 15,color: Colors.grey,
+                  fontWeight: FontWeight.w700
+                ),),
               ),
           );
         }
